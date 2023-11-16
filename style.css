@@ -1,0 +1,10 @@
+
+.task{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.task > p{
+    margin: 0.5em;
+}
