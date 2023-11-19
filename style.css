@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	font-size: 100%;
+}
+
+:root{
+    --corFundo: #38B244;
+    --corFonte: #fff;
+    
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    display: grid;
+}
+
+.adicionarTarefa{
+    border: #141414 1px solid;
+    width: 90vw;
+    padding: 1em;
+    margin: 1em auto 0 auto;
+    
+}
+
+h1{
+    background-color: var(--corFundo);
+    color: var(--corFonte);
+    padding: 1em;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+}
+
+form{
+    margin-top: 1em;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input#escreveTarefa{
+    width: 40%;
+    height: 2em;
+    border-color: #2513F3;
+    border-radius: 8px;
+}
 
 .task{
     display: flex;
@@ -7,4 +59,16 @@
 
 .task > p{
     margin: 0.5em;
+}
+
+.checkBoxMarcado{
+    text-decoration: line-through;
+}
+
+.caixaDeTarefas{
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
 }
