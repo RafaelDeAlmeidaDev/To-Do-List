@@ -9,34 +9,36 @@ adicionarTarefa.addEventListener('click', add);
 function add(e){
     const inputInserirTarefa = document.querySelector('#escreveTarefa').value;
     e.preventDefault();
+    if(inputInserirTarefa != ''){
 
-    const itemDaLista = document.createElement('div');
-    itemDaLista.classList.add('task');
-    
-    const input = document.createElement('input');
-    input.type = 'checkbox';
-    
-    const descricaoTarefa = document.createElement('p');
-    descricaoTarefa.innerText = inputInserirTarefa;
-    
-    const botaoDelete = document.createElement('button');
-    
-    
-    const imagemLixeira = document.createElement('i');
-    imagemLixeira.classList.add('fa-solid');
-    imagemLixeira.classList.add('fa-trash');
-    
-    
-    caixaDeTarefas.appendChild(itemDaLista);
-    itemDaLista.appendChild(input);
-    itemDaLista.appendChild(descricaoTarefa);
-    itemDaLista.appendChild(botaoDelete);
-    botaoDelete.appendChild(imagemLixeira);
-    
-    input.addEventListener('click', tarefaCompleta)
-    botaoDelete.addEventListener('click', deletaTarefa);
-    
-    document.querySelector('#escreveTarefa').value = '';
+        const itemDaLista = document.createElement('div');
+        itemDaLista.classList.add('task');
+        
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        
+        const descricaoTarefa = document.createElement('p');
+        descricaoTarefa.innerText = inputInserirTarefa;
+        
+        const botaoDelete = document.createElement('button');
+        
+        
+        const imagemLixeira = document.createElement('i');
+        imagemLixeira.classList.add('fa-solid');
+        imagemLixeira.classList.add('fa-trash');
+        
+        
+        caixaDeTarefas.appendChild(itemDaLista);
+        itemDaLista.appendChild(input);
+        itemDaLista.appendChild(descricaoTarefa);
+        itemDaLista.appendChild(botaoDelete);
+        botaoDelete.appendChild(imagemLixeira);
+        
+        input.addEventListener('click', tarefaCompleta)
+        botaoDelete.addEventListener('click', deletaTarefa);
+        
+        document.querySelector('#escreveTarefa').value = '';
+    }
 
 }
 
